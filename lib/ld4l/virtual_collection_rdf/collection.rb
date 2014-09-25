@@ -1,5 +1,6 @@
-Dir["lib/ld4l/virtual_collection_rdf/vocab/*.rb"].each {|file| require file[4,file.size-3] }
-require "rdf"
+require 'ld4l/virtual_collection_rdf/vocab/ore'
+require 'ld4l/virtual_collection_rdf/vocab/dcterms'
+require 'rdf'
 
 module LD4L
   module VirtualCollectionRDF
@@ -13,7 +14,6 @@ module LD4L
       # TODO    Can you apply order to only parts of the list, or does applying order imply all items are now ordered?
       # TODO    If all items are now ordered, what is the process for going through all subitems and adding order information?
 
-puts "**********"
 
       # TODO... items are not persisted when this class is persisted because there is not connection from this class to the items
       # TODO    Either the persist! method needs to be overridden to also save the items (which would also require an items attribute to hold them)

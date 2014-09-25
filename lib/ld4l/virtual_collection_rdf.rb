@@ -1,6 +1,6 @@
 require 'rdf'
 require 'active_triples'
-require "ld4l/virtual_collection_rdf/version"
+require 'ld4l/virtual_collection_rdf/version'
 
 module LD4L
   module VirtualCollectionRDF
@@ -24,8 +24,13 @@ module LD4L
 
 
     # RDF vocabularies
-    VOCABS = Dir.glob(File.join(File.dirname(__FILE__), 'virtual_collection_rdf', 'vocab', '*.rb')).map { |f| File.basename(f)[0...-(File.extname(f).size)].to_sym } rescue []
-    VOCABS.each { |v| autoload v.to_s.upcase.to_sym, "ld4l/virtual_collection_rdf/vocab/#{v}" }
+    autoload :CNT,                 'ld4l/virtual_collection_rdf/vocab/cnt'
+    autoload :CO,                  'ld4l/virtual_collection_rdf/vocab/co'
+    autoload :DCTERMS,             'ld4l/virtual_collection_rdf/vocab/dcterms'
+    autoload :DCTYPES,             'ld4l/virtual_collection_rdf/vocab/dctypes'
+    autoload :IANA,                'ld4l/virtual_collection_rdf/vocab/iana'
+    autoload :ORE,                 'ld4l/virtual_collection_rdf/vocab/ore'
+
 
     # autoload classes
     autoload :Configuration,       'ld4l/virtual_collection_rdf/configuration'

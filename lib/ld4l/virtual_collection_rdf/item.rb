@@ -1,4 +1,6 @@
-Dir["lib/ld4l/virtual_collection_rdf/vocab/*.rb"].each {|file| require file[4,file.size-3] }
+require 'ld4l/virtual_collection_rdf/vocab/ore'
+require 'ld4l/virtual_collection_rdf/vocab/iana'
+require 'rdf'
 
 module LD4L
   module VirtualCollectionRDF
