@@ -1,4 +1,4 @@
-# Ld4l::VirtualCollectionRdf
+# LD4L::VirtualCollectionRDF
 
 LD4L Virtual Collection RDF provides tools for modeling a Virtual Collection with items and persisting to a triplestore.
 
@@ -23,14 +23,14 @@ code will work in a usable way outside of its use in LD4L Use Cases.
 
 ### Models
 
-The ld4l::VirtualCollectionRDF gem provides model definitions using the 
+The LD4L::VirtualCollectionRDF gem provides model definitions using the 
 [ActiveTriples](https://github.com/no-reply/ActiveTriples) framework extension of 
 [ruby-rdf/rdf](https://github.com/ruby-rdf/rdf).  Two models are provided:
 
-1. LD4L::VirtualCollectionRDF - Implements a virtual collection of bibliographic references.  
+1. LD4L::VirtualCollectionRDF::Collection - Implements a virtual collection of bibliographic references.  
   a. Basic metadata about the virtual collection is maintained using DC and DCTERMS predicates.  
   b. The list of items are maintained using an ORE Aggregation.  .
-2. LD4L::VirtualCollectionItemRDF - Models each item in a virtual collection.
+2. LD4L::VirtualCollectionRDF::Item - Models each item in a virtual collection.
   a. Each item is an ORE Proxy defined in the [ORE ontology](http://www.openarchives.org/ore/1.0/vocabulary#otherRelationships).
 
 ### Ontologies

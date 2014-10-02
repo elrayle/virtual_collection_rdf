@@ -6,7 +6,7 @@ require 'ld4l/virtual_collection_rdf/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "ld4l-virtual_collection_rdf"
-  spec.version       = Ld4l::VirtualCollectionRdf::VERSION
+  spec.version       = LD4L::VirtualCollectionRDF::VERSION
   spec.authors       = ["E. Lynette Rayle"]
   spec.email         = ["elr37@cornell.edu"]
   spec.platform      = Gem::Platform::RUBY                                    # FROM ActiveTriples gemspec file
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{LD4L Virtual Collection RDF provides tools for modeling a Virtual Collection with items and persisting to a triplestore.}
   spec.homepage      = "https://github.com/ld4l/virtual_collection_rdf"
   spec.license       = "APACHE2"
-  spec.required_ruby_version     = '>= 1.9.3'                                 # FROM ActiveTriples gemspec file
+  spec.required_ruby_version     = '>= 2.1.2'                                 # FROM ActiveTriples gemspec file
 
   spec.files         = `git ls-files -z`.split("\x0")
   # spec.files         = `git ls-files`.split("\n")                           # FROM ActiveTriples gemspec file
@@ -36,6 +36,6 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = [
       "LICENSE.txt",
       "README.md"
-  ]                                                                           # FROM ActiveTriples gemspec file
+  ]
 end
 
