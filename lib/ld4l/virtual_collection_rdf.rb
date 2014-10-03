@@ -1,5 +1,6 @@
 require 'rdf'
 require 'active_triples'
+require	'linkeddata'
 require 'ld4l/virtual_collection_rdf/version'
 
 module LD4L
